@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>ログイン</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="assets/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="assets/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/css/util.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<!--===============================================================================================-->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script type="text/javascript" src="/assets/js/app.js"></script>
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('assets/images/background2.jpg');">
+			<div class="wrap-login100">
+				<div >
+					<img class="logo_img" src="/assets/images/bg.png" alt="">
+				</div>
+				<section class="login100-form validate-form">
+					
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="text" name="username" id="username" placeholder="ユーザーネーム">
+						<span class="focus-input100" data-placeholder="&#xf207;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" id="password" name="password" placeholder="パスワード">
+						<span class="focus-input100" data-placeholder="&#xf191;"></span>
+						<span toggle="#password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+						<button class="login100-form-btn" id="btnLogin">
+							ログイン
+						</button>
+					</div>
+
+					<div class="text-center p-t-30 p-b-30">
+						<a class="txt1" href="#">
+							パスワードをお忘れですか？
+						</a>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</body>
+	<script src="assets/vendor/bootstrap/js/popper.js"></script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/main.js"></script>
+<!--===============================================================================================-->
+	<!-- <script src="assets/vendor/jquery/jquery-3.2.1.min.js"></script> -->
+<!--===============================================================================================-->
+	<script src="assets/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/vendor/daterangepicker/moment.min.js"></script>
+	<script src="assets/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+
+<script>
+    function loginHandle() {
+        let customer = {
+            username: $("#username").val(),
+            password: $("#password").val()
+        };
+        $.ajax({
+            type: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            url: "/api/login",
+            data: JSON.stringify(customer)
+        }).done((user) => {
+            if  (user.roles[0].authority === "学生"){
+                window.location.href = "student";
+            } else if(user.roles[0].authority === "先生"){
+            	window.location.href = "teacher";
+            } else if(user.roles[0].authority === "家族"){
+            	window.location.href = "parent";
+            }else if(user.roles[0].authority === "カウンセラー"){
+            	window.location.href = "doctor";
+            }
+            else {
+                window.location.href = "login";
+            }
+            App.setCookie("JWT", user.token);
+        }).fail(() => {
+            App.showErrorAlert("エラー！エラーが発生しました。しばらくしてからもう一度お試しください。ユーザー名またはパスワードを確認してください");
+        });
+    }
+    $("#btnLogin").on("click",loginHandle);
+
+	$(".toggle-password").on("click",(function() {
+
+		$(this).toggleClass("fa-eye fa-eye-slash");
+		var input = $($(this).attr("toggle"));
+		if (input.attr("type") == "password") {
+			input.attr("type", "text");
+		} else {
+			input.attr("type", "password");
+		}
+	}));
+</script>
+</html>

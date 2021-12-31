@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>役職</title>
+<th:block th:replace="layout/head::head"></th:block>
+<link rel="stylesheet" href="/assets/css/style-post.css"/>
+<link href="/assets/css/emoji.css" rel="stylesheet">
+</head>
+
+<body>
+	<th:block th:replace="layout/nav-bar::nav-bar"></th:block>
+	<div class="get-in-touch">
+		<form id="edit-form" class="contact-form row">
+
+			<img class="img_banner" src="/assets/images/background_header.jpg"
+				alt="" />
+			<div class="form-field col-lg-12">
+				<label style="color: #343a40;" class="input-info">イベント選択</label>
+				<select style="color: #343a40;" class="input-text js-input" id="event_id" th:field="${post.event.event_id}">
+					<option th:each="i:${events}" th:value="${i.event_id}"
+						th:text="${i.event_name}"></option>
+				</select>
+			</div>
+
+			<input type="hidden" th:value="${post.post_id}" id="post_id" /> <input
+				type="hidden" th:value="${post.user.id}" id="user_id" />
+
+			<div class="form-field col-lg-12">
+				<label for="work_completed">学校生活での出来事</label> <input
+					th:field="${post.work_completed}" name="work_completed"
+					id="work_completed" class="input-text input-info js-input"
+					type="text" required />
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="action">自分の行動</label> <input th:field="${post.action}"
+					name="action" id="action"
+					class="input-text input-info js-input action" type="text" required />
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="power">発揮した力</label> <input th:field="${post.power}"
+					name="power" id="power"
+					class="input-text input-info js-input can-ability" type="text"
+					required />
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="capacity">伸びた能力</label> <input
+					th:field="${post.capacity}" name="capacity" id="capacity"
+					class="input-text input-info js-input ability" type="text" required />
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="think">考えた事</label> <input th:field="${post.think}"
+					name="think" id="think"
+					class="input-text input-info js-input think" type="text" required />
+			</div>
+
+			<div style="text-align: center" class="form-field col-lg-12">
+				<button id="edit-button" class="btn btn-primary">新規</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="form_comment">
+		<div class="row" style="margin: 0 0;" id="text_comment">
+
+		</div>
+
+		<div class="content">
+			<div class="text-center image_comment" id="image_comment">
+
+			</div>
+			<div class="input_comment" id="form-by-role">
+
+			</div>
+			<div class="send_custom">
+				<div class="send">
+					<button class="btn create_comment" id="create_comment"><i class="fa fa-paper-plane"></i></button>
+					<button class="btn update_comment hidden" id="update_comment"><i class="fas fa-check-circle"></i></button>
+				</div>
+			</div>
+			<div class="send_custom" id="cancel">
+
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+
+<th:block th:replace="layout/script-post::script-post"></th:block>
+
+<script src="/assets/js/multiple-comment.js"></script>
+<script src="/assets/js/student/editPost.js"></script>
+<script src="/assets/js/time.js"></script>
+<script src="/assets/js/post/postDetail.js"></script>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>追跡</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.2/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.0.0/chartjs-plugin-datalabels.min.js" integrity="sha512-R/QOHLpV1Ggq22vfDAWYOaMd5RopHrJNMxi8/lJu8Oihwi4Ho4BRFeiMiCefn9rasajKjnx9/fTQ/xkWnkDACg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/assets/css/chart.css">
+    <th:block th:replace="layout/head::head"></th:block>
+</head>
+<body>
+<div class="content-page">
+    <div class="content">
+        <!-- Start Content-->
+        <div class="container-fluid">
+
+            <!-- start page title -->
+            <th:block th:replace="layout/nav-bar::nav-bar"></th:block>
+
+            <div class="pencil">
+
+						<div class="card card1">
+							<div style="background: #468ecf;">
+								<h3>&nbsp;</h3>
+							</div>
+							<div class="card-body card-body1" id="student-detail">
+
+							</div>
+						</div>
+
+
+						<div class="card card2">
+							<div class="card-body">
+							<canvas id="myChart2"></canvas>
+							</div>
+						</div>
+
+
+						<div class="card card3">
+							<div class="card-body card-body2">
+								<div>
+									<h6><span style="background-color:black ; font-size: 10px; padding: 0px 4px;margin-right: 10px;">&nbsp;</span>主体性</h6>
+									<h6><span style="background-color:blue ; font-size: 10px; padding: 0px 4px;margin-right: 10px;">&nbsp;</span>働きかけ力</h6>
+									<h6><span style="background-color:brown ; font-size: 10px; padding: 0px 4px;margin-right: 10px;">&nbsp;</span>実行力</h6>
+									<h6><span style="background-color:cyan ; font-size: 10px; padding: 0px 4px;margin-right: 10px;">&nbsp;</span>課題発見力</h6>
+									<h6><span style="background-color:gray ; font-size: 10px; padding: 0px 4px;margin-right: 10px;">&nbsp;</span>計画力</h6>
+									<h6><span style="background-color:green ; font-size: 10px; padding: 0px 4px;margin-right: 10px;">&nbsp;</span>創造力</h6>
+								</div>
+								<div>
+									<h6><span style="background-color:magenta ; font-size: 10px; padding: 0px 4px;margin-right: 10px;">&nbsp;</span>発信力</h6>
+									<h6><span style="background-color:orange ; font-size: 10px; padding: 0px 4px;margin-right: 10px;">&nbsp;</span>傾聴力</h6>
+									<h6><span style="background-color:pink ; font-size: 10px; padding: 0px 4px;margin-right: 10px;">&nbsp;</span>柔軟性</h6>
+									<h6><span style="background-color:purple ; font-size: 10px; padding: 0px 4px;margin-right: 10px;">&nbsp;</span>状況把握力</h6>
+									<h6><span style="background-color:red ; font-size: 10px; padding: 0px 4px;margin-right: 10px;">&nbsp;</span>規律性</h6>
+									<h6><span style="background-color:yellow ; font-size: 10px; padding: 0px 4px;margin-right: 10px;">&nbsp;</span>ストレスコントロール力</h6>
+								</div>
+							</div>
+						</div>
+
+			</div>
+
+			<div class="card">
+				<div class="card-body">
+					<div>
+						<div class="col-lg-12 col-md-12">
+							<div class="form-check form-switch">
+								<div class="switch">
+									<input class="form-check-input" type="checkbox" name="checkSwitch" id="flexSwitchCheckDefault">
+									<label class="form-check-label" for="flexSwitchCheckDefault">テ-ブル</label>
+								</div>
+
+								<div class="card">
+									<div class="card-body" id="chart-column">
+										<div>
+											<div class="col-lg-12 col-md-12 justify-content-center">
+												<div class="row">
+													<div class="col-lg-12 col-md-12">
+														<canvas id="myChart3"></canvas>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-lg-12 col-md-12 hidden" id="chart-table">
+										<table class="table table-bordered" id="listTable">
+											<thead>
+												<tr>
+													<th scope="col">社会人基礎力 | クラス</th>
+													<th scope="col">小１</th>
+													<th scope="col">小2</th>
+													<th scope="col">小3</th>
+													<th scope="col">小4</th>
+													<th scope="col">小5</th>
+													<th scope="col">小6</th>
+													<th scope="col">中１</th>
+													<th scope="col">中２</th>
+													<th scope="col">中３</th>
+													<th scope="col">高１</th>
+													<th scope="col">高２</th>
+													<th scope="col">高３</th>
+													<th scope="col">一年生</th>
+													<th scope="col">二年生</th>
+													<th scope="col">三年生</th>
+													<th scope="col">四年生</th>
+												</tr>
+											</thead>
+											<tbody>
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+
+</body>
+<th:block th:replace="layout/script::script"></th:block>
+<th:block th:replace="layout/modalListEvent::modalListEvent"></th:block>
+<script src="assets/js/chart/chart.js"></script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>役職</title>
+	<th:block th:replace="layout/head::head"></th:block>
+	<link rel="stylesheet" href="/assets/css/style-post.css" />
+	<link href="/assets/css/emoji.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<th:block th:replace="layout/nav-bar::nav-bar"></th:block>
+	<div class="get-in-touch">
+		<form class="contact-form row" id="create-form">
+			<img class="img_banner" src="/assets/images/background_header.jpg" alt=""/>
+			<div class="form-field col-lg-12">
+				<label class="input-info" for="event">イベント選択</label>
+				<select class="input-text js-input" name="event" id="event">
+				</select>
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="work_completed">学校生活での出来事</label>
+				<input id="work_completed" name="work_completed" class="input-text input-info js-input work_completed" type="text" required /> 
+				
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="action">自分の行動</label>
+				<input id="action" name="action" class="input-text input-info js-input action"type="text" required /> 
+				
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="power">発揮した力</label>
+				<input id="power" name="power" class="input-text input-info js-input power" type="text" required /> 
+				
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="capacity">伸びた能力</label>
+				<input id="capacity" name="capacity" class="input-text input-info js-input capacity" type="text" required /> 
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="think">考えた事</label>
+				<input id="think" name="think" class="input-text input-info js-input think" type="text" required /> 
+			</div>
+			<div class="col-lg-12 text-center mb-4">
+				<button class="btn btn-primary waves-effect waves-light mr-1" id="create-button" type="button">登録</button>
+                <button type="reset" class="btn btn-secondary waves-effect waves-light">キャンセル</button>
+			</div>
+		</form>
+
+	</div>
+
+	</div>
+</body>
+<th:block th:replace="layout/script::script"></th:block>
+<script src="/assets/js/student/createPost.js"></script>
+</html>

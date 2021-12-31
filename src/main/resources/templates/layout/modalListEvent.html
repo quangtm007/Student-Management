@@ -1,0 +1,31 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--Modal Edit-->
+<div th:fragment="modalListEvent" class="modal fade" id="showModalEvent" data-bs-backdrop="static"
+     data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">社会人基礎力</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="event-modal">
+          <table class="table" id="list_event">
+            <thead>
+              <tr>
+                <th scope="col" class="text-center">ID</th>
+                <th scope="col" class="text-center">イベント</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</html>

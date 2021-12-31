@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<div th:fragment="nav-bar">
+	<div class="row nav_bar"> 
+              <div class="col-lg-6" style="margin-top: 10px;">
+                <div class="page-title-box">
+                  <h4 class="page-title"><strong>社会人基礎</strong></h4>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="col-lg-6" style="text-align: right;">
+                <ul class="list-unstyled topnav-menu float-right mb-0">
+                    
+                    <li class="dropdown notification-list">
+                        
+                        <div class="nav-link nav-user mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <div class="cog-lg-6">
+                                <div class="row">
+                                    <div class="col-lg-2 back_out" style="font-size: 30px;"><span><i class="fas fa-arrow-left"></i></span></div>
+                                   <!--  <div class="col-lg-2 back_out" style="font-size: 30px;"><span><i class="fas fa-power-off"></i></span></div> -->
+                                    <div class="col-lg-2 back_out">
+	                                    <form form-method="post" th:action=@{/logout} class="form_logout">
+	                        				<button type="submit" class="btn" style="font-size: 30px; color:#0d6efd"><i class="fas fa-power-off"></i></button>
+	                        			</form>
+                                    <!-- <span><i class="fas fa-power-off"></i></span> -->
+                                    </div>
+                                    
+                                    <div class="col-lg-2 nav_header_img">
+                                    	
+                                    </div>
+                                    <div class="col-lg-6 text-left nav_header">
+                                        <span id="user">
+                                            <!-- こにちわ 内海
+                                            </br>
+                                            カウンセラー -->
+                                        </span>   
+                                    </div>
+                                </div>  
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+              </div>
+              
+            </div>
+</div>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>家族</title>
+    <th:block th:replace="layout/head::head"></th:block>
+</head>
+<body>
+    <div class="content-page">
+        <div class="content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+    
+            <!-- start page title -->
+            <th:block th:replace="layout/nav-bar::nav-bar"></th:block>
+            <!-- end page title -->
+  <!-- ============================================================== -->
+  <!-- Start Page Content here -->
+  <!-- ============================================================== -->
+
+	  <div class="content-page">
+	    <div class="content">
+	        <div class="row">
+	          <div class="col-12">
+	            <div class="card">
+	              <div class="card-body">
+	                <div class="row search">
+	                    <div class="col-lg-7">
+	                        <div class="row">
+	                            <div class="col-lg-3">
+	                              <input class="effect-1" id="student_name" type="text" placeholder="学生の名前">
+	                              <span class="focus-border"></span>
+	                            </div>
+	                            <div class="form-field col-lg-2">
+	                              <select class="input-text js-input" name="listClass" id="listClass">
+	                                
+	                              </select>
+	                            </div>
+	                            <div class="form-field col-lg-2">
+	                              <select class="input-text js-input" name="listEvent" id="listEvent">
+	                              
+	                              </select>
+	                            </div>
+	                            <div class="col-lg-4">
+	                              <span id="combo1-remove" style="display: none">remove</span>
+	                              <div class="combo js-multiselect">
+	                                <input
+	                                      aria-activedescendant=""
+	                                      aria-autocomplete="none"
+	                                      aria-controls="listbox1"
+	                                      aria-expanded="false"
+	                                      aria-haspopup="listbox"
+	                                      aria-labelledby="combo1-label combo1-selected"
+	                                      id="combo1"
+	                                      class="combo-input"
+	                                      role="combobox"
+	                                      type="text"
+	                                      placeholder="#ハッシュタグ"
+	                                      value=""
+	                                      />
+	                                <div class="combo-menu" role="listbox" id="listbox1"></div>                             
+	                              </div>
+	                            </div>
+	                            <div class="col-lg-1">
+	                            	<button type="button" class="btn searchIcon"><i class="fas fa-search"></i></button>
+	                            </div>  
+	                        </div>
+	                    </div>
+	                    <div class="col-lg-12 input-hashtag" style="margin-top:20px">
+		                   <ul class="selected-options" id="combo1-selected"></ul>
+		                </div>
+	                </div>
+	                
+	                <div class="table-responsive">
+	                  <table class="table table-centered mb-0 table-nowrap" id="postList">
+	                    <thead>
+	                      <tr class="text-center">
+	                        <th>学生 コード</th>
+	                        <th>学生の名前</th>
+	                        <th>学年</th>
+	                        <th>イベント</th>
+	                        <th>ハッシュタグ</th>
+	                        <th class="text-center">トラッキング</th>
+	                      </tr>
+	                    </thead>
+	
+	                    <tbody>
+	                      <tr>
+	                        
+	                      </tr>
+	                    </tbody>
+	                  </table>
+	                </div>
+	                <!-- end .table-responsive-->
+	              </div>
+	              <!-- end card-body -->
+	            </div>
+	            <!-- end card -->
+	          </div>
+	          <!-- end col -->
+	        </div>
+	        <!-- end row -->
+	
+	      </div>
+	      <!-- end container-fluid -->
+	
+	    </div>
+
+    <!-- end content -->
+
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- End Page content -->
+  <!-- ============================================================== -->
+</body>
+<th:block th:replace="layout/script::script"></th:block>
+<script src="assets/js/parent/parent.js"></script>
+</html>

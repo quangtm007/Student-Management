@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>学生</title>
+	<th:block th:replace="layout/head::head"></th:block>
+</head>
+<body>
+<div class="content-page">
+	<div class="content">
+		<!-- Start Content-->
+	<div class="container-fluid">
+
+		<!-- start page title -->
+		<th:block th:replace="layout/nav-bar::nav-bar"></th:block>
+		<!-- end page title -->
+		<div class="content-page">
+			<div class="content">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="row">
+							<div class="mt-4 custom_add">
+								<button type="button" class="btn btn-primary button_add">
+									<i class="fas fa-plus-circle"></i> 新規作成
+								</button>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-body">
+								<div class="search">
+									<div class="search1">
+										<div class="form-field form_search">
+											<select class="input-text js-input" name="classList" id="classList">
+
+											</select>
+										</div>
+										<div class="form-field form_search">
+											<select class="input-text js-input" name="eventList" id="eventList">
+
+											</select>
+										</div>
+									</div>
+
+									<div class="search2">
+										<div class="check_status">
+											<label class="">ステータス</label>
+											<input name="status" type="checkbox" class="status" value="未確認">未確認
+											<input name="status" type="checkbox" class="status" value="確認中">確認中
+											<input name="status" type="checkbox" class="status" value="修了">修了
+										</div>
+										<div class="search_btn">
+											<button id="searchBtn" class="btn searchIcon">
+												<i class="fas fa-search"></i>
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="table-responsive">
+									<table class="table table-centered mb-0 table-nowrap" id="postList">
+										<thead>
+											<tr class="text-center">
+												<th>学年</th>
+												<th>イ ベ ン ト</th>
+												<th>ステータス</th>
+												<th>通知</th>
+												<th>アクション</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- end .table-responsive-->
+						</div>
+						<!-- end card-body -->
+					</div>
+					<!-- end card -->
+				</div>
+				<!-- end col -->
+			</div>
+			<!-- end row -->
+		</div>
+		<!-- end container-fluid -->
+	</div>
+	<!-- end content -->
+</div>
+</div>
+<!-- ============================================================== -->
+<!-- End Page content -->
+<!-- ============================================================== -->
+</body>
+<th:block th:replace="layout/script::script"></th:block>
+<script src="/assets/js/student/student.js"></script>
+</html>

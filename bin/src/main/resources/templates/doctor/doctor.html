@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>カウンセラー</title>
+    <th:block th:replace="layout/head::head"></th:block>
+</head>
+<body>
+    <div class="content-page">
+        <div class="content">
+          <!-- Start Content-->
+          <div class="container-fluid">
+    
+            <!-- start page title -->
+            <th:block th:replace="layout/nav-bar::nav-bar"></th:block>
+            <!-- end page title -->
+  <!-- ============================================================== -->
+  <!-- Start Page Content here -->
+  <!-- ============================================================== -->
+
+  <div class="content-page">
+    <div class="content">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row search">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-3">
+                              <input class="effect-1" type="text" placeholder="学生の名前">
+                              <span class="focus-border"></span>
+                            </div>
+                            <div class="form-field col-lg-2">
+                              <select class="input-text js-input" name="listClass" id="listClass">
+                                
+                              </select>
+                            </div>
+                            <div class="form-field col-lg-2">
+                              <select class="input-text js-input" name="listEvent" id="listEvent">
+<<<<<<< HEAD
+                              
+=======
+                                <option value="" selected>イ ベ ン ト</option>
+                                <option value="saab">読書</option>
+                                <option value="mercedes">ジョギング</option>
+                                <option value="audi">テニス</option>
+>>>>>>> quangtm
+                              </select>
+                            </div>
+                            <div class="col-lg-3">
+                              <input class="effect-1" type="text" placeholder="#ハ ッ シ ュ タ グ">
+                              <span class="focus-border"></span>
+                            </div>
+                            <div class="col-lg-2 searchIcon">
+                              <i class="fas fa-search"></i>
+                            </div>  
+                        </div>
+                         
+                    </div>
+
+                </div>
+                <div class="table-responsive">
+<<<<<<< HEAD
+                  <table class="table table-centered mb-0 table-nowrap" id="postList">
+=======
+                  <table class="table table-centered mb-0 table-nowrap" id="productList">
+>>>>>>> quangtm
+                    <thead>
+                      <tr>
+                        <th>学生 コ ー ド</th>
+                        <th>学生の名前</th>
+                        <th>学年</th>
+                        <th>イ ベ ン ト</th>
+                        <th>ハ ッ シ ュ タ グ</th>
+                        <th class="text-center">ト ラ ッ キ ン グ</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+<<<<<<< HEAD
+                        
+=======
+                        <td>ST0001</td>
+                        <td>平原</td>
+                        <td>小５</td>
+                        <td>サッカー</td>
+                        <td>＃働きかけ</td>
+                        <td class="text-center chart"><i class="fas fa-chart-area"></i></td>
+>>>>>>> quangtm
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <!-- end .table-responsive-->
+              </div>
+              <!-- end card-body -->
+            </div>
+            <!-- end card -->
+          </div>
+          <!-- end col -->
+        </div>
+        <!-- end row -->
+
+      </div>
+      <!-- end container-fluid -->
+
+    </div>
+    <!-- end content -->
+
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- End Page content -->
+  <!-- ============================================================== -->
+</body>
+<th:block th:replace="layout/script::script"></th:block>
+<script src="assets/js/doctor/doctor.js"></script>
+</html>

@@ -1,0 +1,70 @@
+.pencil{
+    display: flex;
+    justify-content: center;
+}
+.card1{
+    width: 26rem !important;
+    height: 18rem;
+}
+
+.card-title1{
+	margin-top: 20px;
+}
+
+.image{
+	width: 150px;
+	height: 150px;
+}
+
+.card2{
+	width: 26rem !important;
+	height: 18rem;
+}
+
+#myChart2{
+	width:50%;
+	max-width:50% ;
+	margin-top: 0px;
+	margin-left: 100px;
+}
+
+.card3{
+	width: 26rem !important;
+	height: 18rem
+}
+
+.card-body1{
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-body2{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 35px;
+}
+
+table td {
+	text-align: center;
+}
+
+.switch{
+	display: flex;
+	justify-content: right;
+	margin-bottom: 15px;
+}
+
+.form-check-input{
+	margin-right: 60px !important;
+}
+
+.hidden{
+	display: none;
+}
+
+@media (max-width: 1280px) {
+	.pencil{
+		display: flex;
+		flex-direction: column;
+	}
+}

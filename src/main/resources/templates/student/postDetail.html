@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>役職</title>
+	<th:block th:replace="layout/head::head"></th:block>
+	<link rel="stylesheet" href="/assets/css/style-post.css" />
+	<link href="/assets/css/emoji.css" rel="stylesheet">
+	<script src="/assets/js/config.js"></script>
+	<script src="/assets/js/util.js"></script>
+	<script src="/assets/js/jquery.emojiarea.js"></script>
+	<script src="/assets/js/emoji-picker.js"></script>
+</head>
+
+<body>
+	<th:block th:replace="layout/nav-bar::nav-bar"></th:block>
+	<div class="get-in-touch">
+		<form class="contact-form row" id="create-form">
+			<img class="img_banner" src="/assets/images/background_header.jpg" alt=""/>
+			<div class="form-field col-lg-12">
+				<label class="input-info" for="event">イベント選択</label>
+				<select disabled class="input-text js-input" name="event" id="event">
+				</select>
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="work_completed">学校生活での出来事</label>
+				<textarea disabled id="work_completed" class="content-textarea input-info js-input work_completed" type="text" rows="3" required /></textarea>
+				
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="action">自分の行動</label>
+				<textarea disabled id="action" class="content-textarea input-info js-input action" type="text" rows="3" required /></textarea>
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="power">発揮した力</label>
+				<textarea disabled id="power" class="content-textarea input-info js-input power" type="text" rows="3" required /></textarea>
+				
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="capacity">伸びた能力</label>
+				<textarea disabled id="capacity" class="content-textarea input-info js-input capacity" type="text" rows="3" required /></textarea>
+			</div>
+			<div class="form-field col-lg-12">
+				<label for="think">考えた事</label>
+				<textarea disabled id="think" class="content-textarea input-info js-input think" type="text" rows="3" required /></textarea>
+			</div>
+		</form>
+
+	</div>
+	
+	<div class="form_comment">
+		<div class="row" style="margin: 0 0;" id="text_comment">
+		
+		</div>
+
+		<div class="content">
+				<div class="text-center image_comment" id="image_comment">
+					
+				</div>
+				<div class="input_comment" id="form-by-role">
+					   
+				</div>
+				<div class="send_custom">
+					<div class="send">
+						<button class="btn create_comment" id="create_comment"><i class="fa fa-paper-plane"></i></button>
+						<button class="btn update_comment hidden" id="update_comment"><i class="fas fa-check-circle"></i></button>
+					</div>
+				</div>
+				<div class="send_custom" id="cancel">
+
+				</div>
+			</div>
+	</div>
+</div>
+</body>
+
+<th:block th:replace="layout/script-post::script-post"></th:block>
+
+<script src="/assets/js/multiple-comment.js"></script>
+<script src="/assets/js/time.js"></script>
+<script src="/assets/js/post/postDetail.js"></script>
+</html>

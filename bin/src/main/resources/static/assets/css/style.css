@@ -1,0 +1,133 @@
+body{
+    background-color: #ebebeb !important;
+}
+.rounded-circle{
+    width: 50px;
+    height: 50px;
+}
+.nav_bar{
+    background-color: white;
+}
+.content-page{
+    margin-top: 20px;
+}
+.page-title{
+    font-size: 30px;
+    color: rgb(36, 36, 206);
+}
+thead {
+    background-color: #3780eb;
+    color: white;
+}
+.search{
+    margin-bottom: 20px;
+}
+.notification, .check, .chart{
+    color: #4ca4fc;
+}
+/*= Reset CSS 
+============= */
+/* html, body {border: 0; margin: 0; padding: 0;}
+body {font: 14px "Lato", Arial, sans-serif; min-width: 100%; min-height: 100%; color: #666;}
+.container{margin: 0 auto; max-width: 1200px;}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+.row{float: left; width: 100%; padding: 20px 0 50px;}
+h2{text-align: center; color: #2079df; font-size: 28px; float: left; width: 100%; margin: 30px 0; position: relative; line-height: 58px; font-weight: 400;}
+h2:before{content: ""; position: absolute; left: 50%; bottom: 0; width: 100px; height: 2px; background-color: #2079df; margin-left: -50px;} */
+/*= Reset CSS End
+================= */
+
+/*= input focus effects css
+=========================== */
+:focus{outline: none;}
+
+.col-3{float: left; width: 27.33%; margin: 40px 3%; position: relative;} /* necessary to give position: relative to parent. */
+input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+
+.effect-1, 
+.effect-2, 
+.effect-3{border: 0; padding: 7px 0; border-bottom: 1px solid #ccc;}
+
+.effect-1 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #3399FF; transition: 0.4s;}
+.effect-1:focus ~ .focus-border{width: 100%; transition: 0.4s;}
+.input-text {
+    display: block;
+    width: 100%;
+    color: gray;
+    border-width: 0 0 1px 0;
+    border-color: #cccccc;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    padding-bottom: 9px;
+    padding-top: 6px;
+}
+.input-text:focus {
+    outline: none;
+}
+.input-text:focus + .label,
+.input-text.not-empty + .label {
+    -webkit-transform: translateY(-24px);
+    transform: translateY(-24px);
+}
+
+.searchIcon{
+    padding-top: 6px;
+    color: #4ca4fc;
+}
+
+.btn-primary{
+    border-radius: 20px;
+}
+
+.form_search{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-right: 1px solid #cccccc;
+    
+}
+
+.status{
+    color: gray;
+    margin-top: 6px;
+}
+
+.student_detail, .search{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 15px;
+}
+
+.search{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #cccccc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.back_out{
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-right: 1px solid #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_logout{
+	display: flex;
+    justify-content: center;
+}
+
+.nav_header{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
